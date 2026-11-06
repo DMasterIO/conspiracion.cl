@@ -26,3 +26,6 @@ Juego de misterio estático (HTML + CSS + JS, sin backend), al estilo de Notpron
 
 ## Agregar o cambiar niveles
 Edita la lista `NIVELES` en `gen/build.py` y ejecuta `python3 build.py <carpeta_salida>`. Regenera todas las páginas con los enlaces encadenados.
+
+---
+Recreación hecha con Claude, 2026.
