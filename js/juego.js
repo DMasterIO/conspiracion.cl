@@ -42,6 +42,9 @@
   var input = document.getElementById("clave");
   var msg = document.getElementById("mensaje");
 
+  // cursor listo en el recuadro apenas carga el nivel
+  try { input.focus({ preventScroll: true }); } catch (e) { input.focus(); }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var intento = clave(input.value);
