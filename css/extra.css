@@ -1,0 +1,16 @@
+/* estilos de los niveles interactivos */
+.foto { display: block; max-width: 100%; height: auto; margin: 1rem auto; border: 1px solid var(--verde-tenue); background: #000; }
+.cielo a { cursor: pointer; }
+.puerta { display: block; width: 150px; margin: 0 auto 1rem; }
+.control { margin: .4rem 0; }
+.control input[type=range] { width: 70%; vertical-align: middle; accent-color: var(--verde); }
+.diminuto { font-size: .7rem; color: var(--verde-tenue); margin-top: 2rem; }
+.largo { height: 9000px; display: flex; flex-direction: column; justify-content: space-around; color: var(--verde-tenue); text-align: center; }
+.espejo { display: inline-block; transform: scaleX(-1); }
+.lampara { width: 46px; height: 46px; border-radius: 50%; margin: 1.2rem auto; background: #0b1a0f; border: 1px solid var(--verde-tenue); }
+.lampara.on { background: var(--verde); box-shadow: 0 0 24px var(--verde); }
+.linterna { position: relative; height: 320px; overflow: hidden; background: #000; border: 1px solid var(--verde-tenue); cursor: none; touch-action: none; margin: 1rem 0; }
+.linterna .capa { position: absolute; inset: 0; color: var(--verde); font-size: 1.05rem;
+  -webkit-mask-image: radial-gradient(circle 80px at var(--x, -300px) var(--y, -300px), #000 0%, #000 45%, transparent 100%);
+  mask-image: radial-gradient(circle 80px at var(--x, -300px) var(--y, -300px), #000 0%, #000 45%, transparent 100%); }
+.linterna .capa span { position: absolute; white-space: nowrap; }

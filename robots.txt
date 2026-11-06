@@ -1,0 +1,4 @@
+# Archivo para robots. Los humanos no deberían leer esto.
+# (Las rutas son relativas a esta carpeta.)
+User-agent: *
+Disallow: /bodega-trasera.html

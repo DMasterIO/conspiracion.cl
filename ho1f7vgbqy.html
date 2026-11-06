@@ -4,26 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Nivel 5 · Lo invisible — conspiracion.cl</title>
+<title>Nivel 7 · Penumbra — conspiracion.cl</title>
 <link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/extra.css">
 </head>
 <body>
 <main>
-<h1>Nivel 5 · Lo invisible</h1>
-<h2>Nivel 5 de 11</h2>
+<h1>Nivel 7 · Penumbra</h1>
+<h2>Nivel 7 de 26</h2>
 <div class="nivel">
-<p>Aquí no hay nada. Revisa bien: ni un solo dato, ni una sola pista, ni una sola alga.</p>
-<p><span class="invisible">Sí había algo: la clave de este nivel es cochayuyo.</span></p>
-<p>Nada de nada. Sigue buscando.</p>
+<p>Este documento fue tan censurado que casi no queda nada. Casi.</p>
+<img id="borrosa" class="foto" src="img/archivo-borroso.svg" alt="Una imagen casi completamente negra">
+<p class="control"><label>Brillo <input type="range" id="brillo" min="1" max="8" step="0.1" value="1"></label></p>
+<p class="control"><label>Contraste <input type="range" id="contraste" min="1" max="20" step="0.5" value="1"></label></p>
+<p>Escribe lo que logres leer.</p>
 </div>
-<form id="form-clave" data-esperado="1c7ar4rb9a3" data-destino="1c7ar4rb9a3.html" autocomplete="off">
-<input type="text" id="clave" placeholder="escribe la clave" autofocus aria-label="clave">
+<form id="form-clave" data-esperado="1k94pumumj2" data-destino="1k94pumumj2.html" autocomplete="off">
+<input type="text" id="clave" placeholder="escribe la clave" aria-label="clave">
 <button type="submit">Entrar</button>
 <p id="mensaje" role="status"></p>
 </form>
-<details><summary>¿Necesitas una pista?</summary><p>No toda la tinta se ve. Prueba seleccionando todo el texto de la página (Ctrl+A).</p></details>
-<p class="pie">conspiracion.cl · recreación fan · inspirado en Notpron · nivel 5/11</p>
+<details><summary>¿Necesitas una pista?</summary><p>Sube primero el brillo hasta 5 o 6 y luego el contraste, de a poco.</p></details>
+<p class="pie">conspiracion.cl · recreación fan · inspirado en Notpron · nivel 7/26</p>
 </main>
 <script src="js/juego.js"></script>
+<script>
+var im = document.getElementById("borrosa"), b = document.getElementById("brillo"), c = document.getElementById("contraste");
+function ajustar() { im.style.filter = "brightness(" + b.value + ") contrast(" + c.value + ")"; }
+b.addEventListener("input", ajustar); c.addEventListener("input", ajustar);
+</script>
 </body>
 </html>

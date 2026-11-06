@@ -4,26 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Nivel 9 · Números — conspiracion.cl</title>
+<title>Nivel 14 · La puerta — conspiracion.cl</title>
 <link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/extra.css">
 </head>
 <body>
 <main>
-<h1>Nivel 9 · Números</h1>
-<h2>Nivel 9 de 11</h2>
-<div class="nivel">
-<p>Los antiguos del sur guardaban este nombre, y sus piñones alimentaron a un pueblo entero. Hoy está escrito con números.</p>
-<div class="codigo">16 - 5 - 8 - 21 - 5 - 14</div>
-<p>Cada número es una letra. A es el 1.</p>
+<h1>Nivel 14 · La puerta</h1>
+<h2>Nivel 14 de 26</h2>
+<div class="nivel"><svg class="puerta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" role="img" aria-label="Una puerta cerrada">
+<rect x="40" y="20" width="120" height="220" fill="#1b140d" stroke="#39ff6a"/>
+<rect x="55" y="38" width="90" height="75" fill="none" stroke="#1f9c40"/>
+<rect x="55" y="128" width="90" height="95" fill="none" stroke="#1f9c40"/>
+<circle cx="138" cy="130" r="5" fill="#39ff6a"/><circle cx="100" cy="85" r="6" fill="#39ff6a"/><polygon points="97,88 103,88 105,105 95,105" fill="#39ff6a"/>
+</svg>
+<p>No hay cerradura, ni botón, ni recuadro. Esta puerta escucha.</p>
+<p>Se abre con lo último que se dice antes de irse, con cariño y en diminutivo. Seis letras.</p>
+<p id="estado" class="parpadeo">▮</p>
 </div>
-<form id="form-clave" data-esperado="23zqn7jcofy" data-destino="23zqn7jcofy.html" autocomplete="off">
-<input type="text" id="clave" placeholder="escribe la clave" autofocus aria-label="clave">
-<button type="submit">Entrar</button>
-<p id="mensaje" role="status"></p>
-</form>
-<details><summary>¿Necesitas una pista?</summary><p>A=1, B=2, C=3... El árbol es la araucaria.</p></details>
-<p class="pie">conspiracion.cl · recreación fan · inspirado en Notpron · nivel 9/11</p>
+
+<details><summary>¿Necesitas una pista?</summary><p>Haz clic en la página y simplemente escribe la palabra, sin enter.</p></details>
+<p class="pie">conspiracion.cl · recreación fan · inspirado en Notpron · nivel 14/26</p>
 </main>
 <script src="js/juego.js"></script>
+<script>
+var buf = "", dest = "1s5f3ywpfi3.html", est = document.getElementById("estado");
+document.addEventListener("keydown", function (ev) {
+  if (!ev.key || ev.key.length !== 1) return;
+  buf = (buf + ev.key.toLowerCase()).slice(-12);
+  if (buf.slice(-6) === "chaito") {
+    est.textContent = "La puerta se abre...";
+    setTimeout(function () { window.location.href = dest; }, 600);
+  }
+});
+</script>
 </body>
 </html>

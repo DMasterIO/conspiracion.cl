@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Nivel 19 · La linterna — conspiracion.cl</title>
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/extra.css">
+</head>
+<body>
+<main>
+<h1>Nivel 19 · La linterna</h1>
+<h2>Nivel 19 de 26</h2>
+<div class="nivel">
+<p>Es de noche y no tienes luz. Solo tu linterna, que sigue al cursor (o a tu dedo).</p>
+<div id="linterna" class="linterna"><div class="capa">
+<span style="left:6%;top:12%">nada por aquí</span>
+<span style="left:62%;top:20%">tampoco</span>
+<span style="left:14%;top:58%">sigue buscando</span>
+<span style="left:55%;top:70%">la clave es: luciernaga</span>
+<span style="left:30%;top:86%">frío, frío</span>
+</div></div>
+</div>
+<form id="form-clave" data-esperado="13dwbilfhio" data-destino="13dwbilfhio.html" autocomplete="off">
+<input type="text" id="clave" placeholder="escribe la clave" aria-label="clave">
+<button type="submit">Entrar</button>
+<p id="mensaje" role="status"></p>
+</form>
+<details><summary>¿Necesitas una pista?</summary><p>Recorre toda la caja negra con el cursor. Hay una frase escondida en cada rincón.</p></details>
+<p class="pie">conspiracion.cl · recreación fan · inspirado en Notpron · nivel 19/26</p>
+</main>
+<script src="js/juego.js"></script>
+<script>
+var caja = document.getElementById("linterna"), capa = caja.querySelector(".capa");
+function mover(ev) {
+  var r = caja.getBoundingClientRect();
+  capa.style.setProperty("--x", (ev.clientX - r.left) + "px");
+  capa.style.setProperty("--y", (ev.clientY - r.top) + "px");
+}
+caja.addEventListener("pointermove", mover);
+caja.addEventListener("pointerdown", mover);
+</script>
+</body>
+</html>

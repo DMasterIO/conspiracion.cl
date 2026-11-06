@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Nivel 24 · Zona restringida — conspiracion.cl</title>
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/extra.css">
+</head>
+<body>
+<main>
+<h1>Nivel 24 · Zona restringida</h1>
+<h2>Nivel 24 de 26</h2>
+<div class="nivel">
+<p>Solo pasan los agentes autorizados. Tu identificador debe viajar en la dirección.</p>
+<p id="estado">Verificando credenciales...</p>
+<p id="salida" hidden style="text-align:center"><a class="boton" href="2drupobud7k.html">Pasar</a></p>
+</div>
+
+<details><summary>¿Necesitas una pista?</summary><p>Agrega ?agente= al final de la dirección. El valor es el año en que nació el juego que inspiró este sitio (Notpron).</p></details>
+<p class="pie">conspiracion.cl · recreación fan · inspirado en Notpron · nivel 24/26</p>
+</main>
+<script src="js/juego.js"></script>
+<script>
+var v = new URLSearchParams(window.location.search).get("agente");
+var e = document.getElementById("estado");
+if (v === null) {
+  e.textContent = "ACCESO DENEGADO. Se esperaba un parámetro «agente» en la dirección (…?agente=VALOR).";
+} else if (Conspiracion.clave(v) === "266gw2dtfjf") {
+  e.textContent = "Agente reconocido. Adelante.";
+  document.getElementById("salida").hidden = false;
+} else {
+  e.textContent = "Agente desconocido. Esa identificación no figura en los registros.";
+}
+</script>
+</body>
+</html>
